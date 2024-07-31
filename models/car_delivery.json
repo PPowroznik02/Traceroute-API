@@ -1,0 +1,82 @@
+{
+ "speed": [
+    {
+      "if": "true",
+      "limit_to": "car_average_speed"
+    },
+    {
+      "if": "road_class == MOTORWAY",
+      "limit_to": 130
+    },
+    {
+      "if": "road_class == TRUNK",
+      "limit_to": 80
+    },
+    {
+      "if": "road_class == PRIMARY",
+      "limit_to": 60
+    },
+    {
+      "if": "road_class == SECONDARY",
+      "limit_to": 50
+    },
+    {
+      "if": "road_class == TERTIARY",
+      "limit_to": 40
+    },
+    {
+      "if": "road_class == RESIDENTIAL",
+      "limit_to": 30
+    },
+    {
+      "if": "road_class == SERVICE",
+      "limit_to": 20
+    }
+  ],
+ "priority": [
+    {
+      "if": "true",
+      "multiply_by": "1"
+    },
+    {
+      "if": "road_access == DELIVERY",
+      "multiply_by": "1"
+    },
+    {
+      "if": "road_access == PRIVATE",
+      "multiply_by": "1"
+    },
+    {
+      "if": "car_access == false",
+      "multiply_by": "0.4"
+    },
+    {
+      "if": "road_class == MOTORWAY",
+      "multiply_by": 0.5
+    },
+    {
+      "if": "road_class == TRUNK",
+      "multiply_by": 0.7
+    },
+    {
+      "if": "road_class == PRIMARY",
+      "multiply_by": 1.0
+    },
+    {
+      "if": "road_class == SECONDARY",
+      "multiply_by": 0.9
+    },
+    {
+      "if": "road_class == TERTIARY",
+      "multiply_by": 0.8
+    },
+    {
+      "if": "road_class == RESIDENTIAL",
+      "multiply_by": 0.8
+    },
+    {
+      "if": "road_class == SERVICE",
+      "multiply_by": 0.6
+    }
+  ]          
+}
